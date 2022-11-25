@@ -17,23 +17,25 @@ $light-blue-color: hsl(212, 100%, 60%);
   color: $black-color;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  &::selection {
+    background: $black-color;
+    color: #fff;
+  }
 }
 img {
   user-select: none;
-}
-::selection {
-  background: $black-color;
-  color: #fff;
 }
 body {
   position: relative;
   width: 100vw;
 }
+// HEADER STYLING
 header.header {
   position: fixed;
   top: 1.5rem;
   left: 7.5vw;
   right: 7.5vw;
+  z-index: 999;
   width: 85vw;
   display: flex;
   align-items: center;
@@ -43,6 +45,7 @@ header.header {
   border-radius: .5rem;
   .logo-container {
     img {
+      vertical-align: middle;
       width: 5rem;
       height: 1.4rem;
       object-fit: cover;
@@ -69,6 +72,148 @@ header.header {
         transition: all 0.2s ease-in-out;
         &:hover {
           background-color: $light-blue-color;
+        }
+      }
+    }
+  }
+}
+// HERO PAGE STYLING
+section.hero-page {
+  position: relative;
+  overflow-x: hidden;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  .content {
+    position: relative;
+    z-index: 99;
+    width: 50%;
+    max-width: 40rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    .heading-container {
+      p {
+        font-size: 6rem;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.2vw;
+      }
+    }
+    .description {
+      color: $light-black-color;
+      font-size: 1rem;
+    }
+    a {
+      padding: 16px 32px;
+      border-radius: 8px;
+      background: $blue-color;
+      color: #fff;
+      transition: background 0.2s ease-in-out;
+      &:hover {
+        background-color: $light-blue-color;
+      }
+    }
+  }
+  .imgs-container {
+    position: relative;
+    margin-top: -50vw;
+    width: 100vw;
+    img.is--ring-dollar {
+      position: absolute;
+      top: 80%;
+      left: 20%;
+      width: 10%;
+    }
+    img.is--shoes {
+      position: absolute;
+      top: 60%;
+      left: 20%;
+      width: 20%;
+    }
+    img.is--ring-music {
+      position: absolute;
+      top: 40%;
+      right: 20%;
+      width: 10%;
+    }
+    img.is--watch {
+      position: absolute;
+      top: 70%;
+      right: 20%;
+      width: 25%;
+    }
+    img.hero__image--bg {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  section.hero-page {
+    .content {
+      .heading-container {
+        p {
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.hero-page {
+    .content {
+      width: 100%;
+      .heading-container {
+        p {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section.hero-page {
+    padding: 0 2rem;
+    .content {
+      .heading-container {
+        p {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 1rem !important;
+    nav {
+      display: none !important;
+    }
+  }
+  section.hero-page {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section.hero-page {
+    .content {
+      width: 100%;
+      .heading-container {
+        p {
+          font-size: 2rem;
         }
       }
     }
