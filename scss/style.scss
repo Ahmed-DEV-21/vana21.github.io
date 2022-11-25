@@ -3,7 +3,7 @@
 
 $green-color: hsl(68, 100%, 50%);
 $black-color: hsl(0, 0%, 0%);
-$light-black-color: hsl(216, 9%, 32%);
+$light-black-color: hsl(216, 0%, 40%);
 $blue-color: hsl(212, 100%, 50%);
 $light-blue-color: hsl(212, 100%, 60%);
 
@@ -102,7 +102,7 @@ section.hero-page {
       p {
         font-size: 6rem;
         line-height: 1;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: -0.2vw;
       }
     }
