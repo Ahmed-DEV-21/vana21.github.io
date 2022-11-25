@@ -1,2 +1,93 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-moz-selection {
+  background: black;
+  color: #fff;
+}
+
+::selection {
+  background: black;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+}
+
+header.header {
+  position: fixed;
+  top: 1.5rem;
+  left: 7.5vw;
+  right: 7.5vw;
+  width: 85vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ddff00;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+header.header .logo-container img {
+  width: 5rem;
+  height: 1.4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header.header nav.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header.header nav.navbar .link-container a {
+  font-weight: 600;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header.header nav.navbar .link-container a:hover {
+  color: #4a5059;
+}
+
+header.header nav.navbar .link-container.btn-link-container a {
+  padding: 16px 32px;
+  border-radius: 8px;
+  background: #0077ff;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header.header nav.navbar .link-container.btn-link-container a:hover {
+  background-color: #3392ff;
+}
 /*# sourceMappingURL=style.css.map */

@@ -6,3 +6,71 @@ $black-color: hsl(0, 0%, 0%);
 $light-black-color: hsl(216, 9%, 32%);
 $blue-color: hsl(212, 100%, 50%);
 $light-blue-color: hsl(212, 100%, 60%);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  color: $black-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+img {
+  user-select: none;
+}
+::selection {
+  background: $black-color;
+  color: #fff;
+}
+body {
+  position: relative;
+  width: 100vw;
+}
+header.header {
+  position: fixed;
+  top: 1.5rem;
+  left: 7.5vw;
+  right: 7.5vw;
+  width: 85vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $green-color;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  .logo-container {
+    img {
+      width: 5rem;
+      height: 1.4rem;
+      object-fit: cover;
+    }
+  }
+  nav.navbar {
+    display: flex;
+    gap: 1.5rem;
+    .link-container {
+      a {
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: $light-black-color;
+        }
+      }
+    }
+    .link-container.btn-link-container {
+      a {
+        padding: 16px 32px;
+        border-radius: 8px;
+        background: $blue-color;
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background-color: $light-blue-color;
+        }
+      }
+    }
+  }
+}
